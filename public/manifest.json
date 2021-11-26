@@ -1,0 +1,32 @@
+{
+  "name": "MaverickCER",
+  "short_name": "MaverickCER",
+  "background_color": "#d6002f",
+  "theme_color": "#d6002f",
+  "start_url": "/",
+  "description": "Portfolio for Maverick Manasco",
+  "orientation": "any",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "img/icons/128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icons/256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icons/1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
