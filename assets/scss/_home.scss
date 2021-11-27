@@ -1627,7 +1627,7 @@ body.dark {
   .description_wrap {
     position: relative;
     width: calc(inherit - 4rem);
-    height: calc(100% - 4rem);
+    height: 100%;
     float: left;
     padding: 2rem;
     overflow-y: scroll;
