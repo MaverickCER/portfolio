@@ -3,7 +3,6 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 100;
-  font-display: swap;
   src: url('../fonts/poppins-v15-latin-100.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/poppins-v15-latin-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -17,7 +16,6 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 200;
-  font-display: swap;
   src: url('../fonts/poppins-v15-latin-200.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/poppins-v15-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -31,7 +29,6 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 300;
-  font-display: swap;
   src: url('../fonts/poppins-v15-latin-300.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/poppins-v15-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -45,7 +42,6 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
   src: url('../fonts/poppins-v15-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/poppins-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -59,7 +55,6 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
   src: url('../fonts/poppins-v15-latin-500.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/poppins-v15-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -68,26 +63,11 @@
        url('../fonts/poppins-v15-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/poppins-v15-latin-500.svg#Poppins') format('svg'); /* Legacy iOS */
 }
-/* poppins-600 - latin */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('../fonts/poppins-v15-latin-600.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../fonts/poppins-v15-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/poppins-v15-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/poppins-v15-latin-600.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/poppins-v15-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/poppins-v15-latin-600.svg#Poppins') format('svg'); /* Legacy iOS */
-}
 /* poppins-700 - latin */
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
   src: url('../fonts/poppins-v15-latin-700.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/poppins-v15-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -96,12 +76,24 @@
        url('../fonts/poppins-v15-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/poppins-v15-latin-700.svg#Poppins') format('svg'); /* Legacy iOS */
 }
+/* poppins-600 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/poppins-v15-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/poppins-v15-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/poppins-v15-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/poppins-v15-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/poppins-v15-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/poppins-v15-latin-600.svg#Poppins') format('svg'); /* Legacy iOS */
+}
 /* poppins-800 - latin */
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 800;
-  font-display: swap;
   src: url('../fonts/poppins-v15-latin-800.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/poppins-v15-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -115,7 +107,6 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 900;
-  font-display: swap;
   src: url('../fonts/poppins-v15-latin-900.eot'); /* IE9 Compat Modes */
   src: local(''),
        url('../fonts/poppins-v15-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
