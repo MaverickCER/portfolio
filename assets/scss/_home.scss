@@ -473,7 +473,7 @@ body.dark {
 
   .logo {
     a {
-      background: #fff;
+      background: rgba(255,255,255,.8);
       border-radius: 6px;
       font-size: 18px;
       font-weight: 700;
@@ -493,7 +493,7 @@ body.dark {
     list-style-type: none;
     display: flex;
     align-items: center;
-    background: #fff;
+    background: rgba(255,255,255,.8);
     border-radius: 6px;
     padding: 0;
 
@@ -614,7 +614,7 @@ body.dark {
     height: auto;
     float: left;
     clear: both;
-    background-color: #fff;
+    background: rgba(255,255,255,.8);
     padding: 15px 0px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
   }
@@ -630,7 +630,7 @@ body.dark {
 
     .logo {
       a {
-        background: #fff;
+        background: rgba(255,255,255,0);
         border-radius: 6px;
         font-size: 18px;
         font-weight: 700;
@@ -683,7 +683,7 @@ body.dark {
   height: auto;
   clear: both;
   float: left;
-  background-color: #fff;
+  background: rgba(255,255,255,.8);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
   max-height: 0;
   overflow: hidden;
@@ -748,13 +748,14 @@ body.dark {
 
     .image {
       position: absolute;
-      top: 0px;
-      bottom: 0px;
-      left: 0px;
-      right: 0px;
+      top: 50%;
+      left: 75%;
+      transform: translate(-50%, -50%);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: 75% 100%;
+      width: 200px;
+      height: 200px;
     }
 
     .overlay {
@@ -1075,13 +1076,14 @@ body.dark {
 .beny_tm_hero .social {
   position: absolute;
   bottom: 60px;
-  right: -50px;
+  right: -100px;
   z-index: 2;
   -webkit-transition: all 0.8s ease;
   -moz-transition: all 0.8s ease;
   -ms-transition: all 0.8s ease;
   -o-transition: all 0.8s ease;
   transition: all 0.8s ease;
+  text-align: right;
 
   ul {
     margin: 0px;
@@ -1171,86 +1173,48 @@ body.dark {
 .beny_tm_about {
   .about_inner {
     width: 100%;
-    height: fit-content;
-    clear: both;
-    display: flex;
-    align-items: center;
-    margin-bottom: 125px;
-
-    .left {
-      width: 50%;
-      position: relative;
-      margin-right: 50px;
-      height: fit-content;
-
-      img {
-        opacity: 0;
-        min-width: 100%;
-        height: fit-content;
-      }
-    }
-
-    .right {
-      width: 50%;
-      padding-left: 50px;
-    }
-  }
-
-  .short {
-    width: 100%;
-    float: left;
-
-    h3 {
-      font-size: 40px;
-      font-weight: 600;
-      color: #0f172a;
-      margin-bottom: 22px;
-    }
-
-    p {
-      font-size: 16px;
-    }
-  }
-
-  .extra {
-    width: 100%;
-    float: left;
-    padding-top: 23px;
-
-    .title {
-      color: #0f172a;
-      font-size: 24px;
-      font-weight: 600;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-  }
-
-  .list {
-    width: 100%;
     height: auto;
-    clear: both;
-    float: left;
-    margin-bottom: 20px;
-
+    padding-top: 60px;
+    display: flex;
+    flex-direction: row;
     ul {
-      margin: 0px 0px 0px -20px;
+      margin: 0px 0px 0px -30px;
       list-style-type: none;
 
       li {
-        margin: 0px 0px 14px 0px;
-        width: 50%;
+        margin: 0px 0px 30px 0px;
+        width: 33.3333%;
+        padding-left: 30px;
         float: left;
-        padding-left: 20px;
 
-        p {
-          color: #0f172a;
-          font-size: 16px;
-          font-weight: 500;
-
+        .list_inner {
+          width: 100%;
+          height: auto;
+          clear: both;
+          float: left;
+          position: relative;
+          overflow: hidden;
+          border-radius: 8px;
+          
           span {
-            color: #737373;
-            font-weight: 400;
+            display: inline-block;
+            position: relative;
+            color: #d6002f;
+            font-weight: 500;
+            font-size: 16px;
+            margin-bottom: 12px;
+
+            &:before {
+              position: absolute;
+              content: "";
+              width: 40px;
+              height: 1px;
+              background-color: #d6002f;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 100%;
+              margin-left: 10px;
+            }
           }
         }
       }
@@ -1277,7 +1241,7 @@ body.dark {
       font-size: 40px;
       font-weight: 700;
       color: #0f172a;
-      text-align: center;
+      text-align: left;
     }
   }
 
@@ -1286,10 +1250,12 @@ body.dark {
     height: auto;
     clear: both;
     display: flex;
+    margin: 60px 0;
 
     .skills {
       width: 50%;
       padding-right: 125px;
+      margin-top: 60px;
     }
   }
 
@@ -1343,27 +1309,33 @@ body.dark {
   padding-top: 50px;
 }
 
-.skillgrid {
+.skill_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
-  grid-gap: 1rem;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, 75px);
+  grid-gap: 10vmin;
   color: #737373;
+  width: 100%;
 
   div {
     text-align: center;
   }
-}
-
-.skillemblem > svg {
-  width: 1.7rem;
-  height: auto;
+  
+  .skill_item {
+    .skill_emblem {
+      
+      svg {
+        width: 1.7rem;
+        height: auto;
+      }
+    }
+  }
 }
 
 .beny_tm_resume {
   .education {
     width: 50%;
     padding-left: 125px;
+    margin-top: 60px;
   }
 
   .edu_list {
@@ -1389,6 +1361,14 @@ body.dark {
           span {
             font-size: 18px;
             color: #0f172a;
+          }
+        }
+
+        a {
+          color: #d6002f;
+
+          a:hover {
+            text-decoration: none;
           }
         }
       }
@@ -2005,6 +1985,7 @@ body.dark {
   border: 2px solid #737373;
 }
 
+
 .beny_tm_contact {
   width: 100%;
   height: auto;
@@ -2030,7 +2011,6 @@ body.dark {
     height: auto;
     clear: both;
     float: left;
-    padding-top: 45px;
 
     ul {
       margin: 0px;
@@ -2041,7 +2021,7 @@ body.dark {
         width: 100%;
         float: left;
         position: relative;
-        padding-left: 42px;
+        padding-left: 30px;
 
         &:last-child {
           margin-bottom: 0px;
@@ -2072,6 +2052,7 @@ body.dark {
       widows: 100%;
       float: left;
       margin-bottom: 40px;
+      margin-top: 50px;
 
       p {
         font-size: 25px;
@@ -2085,7 +2066,6 @@ body.dark {
     }
   }
 }
-
 /*---------------------------------------------------*/
 /*	10) COPYRIGHT
 /*---------------------------------------------------*/
@@ -2277,19 +2257,33 @@ body.dark {
     font-size: 50px;
   }
 
+
   .beny_tm_about .about_inner {
-    flex-direction: column;
-    align-items: baseline;
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding: 60px 0;
+    ul {
+      margin: 0px 0px 0px -30px;
+      list-style-type: none;
 
-    .left {
-      width: 100%;
-      padding: 0px;
-      margin-bottom: 50px;
-    }
+      li {
+        margin: 0px 0px 30px 0px;
+        width: 100%;
+        padding-left: 30px;
+        display: block;
 
-    .right {
-      width: 100%;
-      padding: 0px;
+        .list_inner {
+          width: 100%;
+          height: auto;
+          clear: both;
+          float: left;
+          position: relative;
+          overflow: hidden;
+          border-radius: 8px;
+        }
+      }
     }
   }
 
@@ -2297,6 +2291,7 @@ body.dark {
     .resume_inner {
       flex-direction: column;
       align-items: baseline;
+      margin: 60px 0;
 
       .skills {
         width: 100%;
@@ -2358,6 +2353,10 @@ body.dark {
 }
 
 @media (max-width: 768px) {
+  .beny_tm_hero {
+    margin-top: 20vw;
+  }
+
   .beny_tm_hero .content .job {
     font-size: 35px;
   }
@@ -2436,6 +2435,11 @@ body.dark {
 
   .beny_tm_contact .right .title p {
     font-size: 22px;
+  }
+
+  
+  .contact-form__input-row {
+    flex-direction: column;
   }
 
   .container {
@@ -2566,7 +2570,7 @@ input[type="submit"] {
   font-size: 13px;
   font-weight: 400;
   text-decoration: none;
-  letter-spacing: 0.5px;
+  letter-spacing: 0px;
   border: none;
   cursor: pointer;
   color: #fff;

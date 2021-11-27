@@ -22,10 +22,13 @@ setTimeout(function() {
 	) {
 		setTimeout(function() {
 			document.getElementById('preloader').classList.add('preloaded');
-		}, 800);
+		}, 500);
 		setTimeout(function() {
 			document.getElementById('preloader').remove();
-		}, 2000);
+			document
+				.getElementsByClassName('beny_tm_all_wrap')[0]
+				.classList.add('animate');
+		}, 1500);
 	} else {
 		setTimeout(function() {
 			document.getElementById('preloader').classList.add('preloaded');
