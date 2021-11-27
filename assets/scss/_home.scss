@@ -1609,14 +1609,14 @@ body.dark {
       bottom: 0;
       right: 0;
       text-decoration: none;
-      color: #fff;
+      color: #737373;
       cursor: default;
     }
 
     .svg {
       position: fixed;
-      top: 1rem;
-      right: 1rem;
+      top: .9rem;
+      right: 1.1rem;
       z-index: 111;
       width: 2rem;
       height: 2rem;
@@ -2455,7 +2455,8 @@ body.dark {
 
   .beny_tm_modalbox_news {
     .description_wrap {
-      padding: 30px;
+      padding: 10px;
+      word-break: break-all;
     }
 
     .box_inner {
