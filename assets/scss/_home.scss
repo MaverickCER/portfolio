@@ -1450,7 +1450,7 @@ body.dark {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255,255,255,0.8);
     opacity: 0;
     visibility: hidden;
     border-radius: 8px;
@@ -1497,7 +1497,7 @@ body.dark {
     h3 {
       font-weight: 700;
       font-size: 22px;
-      color: #fff;
+      color: #555555;
       opacity: 0;
       visibility: hidden;
       position: relative;
@@ -1511,7 +1511,7 @@ body.dark {
 
     span {
       font-size: 16px;
-      color: #fff;
+      color: #555555;
       opacity: 0;
       visibility: hidden;
       position: relative;
@@ -1557,7 +1557,7 @@ body.dark {
   right: 0px;
   height: 100vh;
   z-index: 15;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255,255,255, 0.8);
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
