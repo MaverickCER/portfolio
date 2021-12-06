@@ -2385,11 +2385,12 @@ body.dark {
       li {
         padding: 0;
         width: 100%;
+
         .overlay {
-          bottom: -516px;
-          right: -578px;
+          bottom: -578px;
+          right: -516px;
         }  
-        .list_inner:hover .overlay{
+        ul li .list_inner:hover .overlay{
           background-position: -516px -578px;
         }
       }
