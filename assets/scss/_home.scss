@@ -1379,7 +1379,6 @@ body.dark {
 /*---------------------------------------------------*/
 /*	07) PORTFOLIO
 /*---------------------------------------------------*/
-
 .beny_tm_portfolio {
   width: 100%;
   height: auto;
@@ -1404,88 +1403,81 @@ body.dark {
       width: 33.3333%;
       padding-left: 30px;
       float: left;
-
-      .list_inner {
-        width: 100%;
-        height: auto;
-        clear: both;
-        float: left;
+      .list_outer {
         position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 112%;
         overflow: hidden;
         border-radius: 8px;
+        .list_inner {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          color: white;
+          text-shadow: 2px 2px #000000;
+          a {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            z-index: 5;
+          }
+          img {
+            width: 100%;
+          }
+        }
       }
     }
   }
 
-  .placeholder {
-    min-width: 100%;
-    position: relative;
-    opacity: 0;
-  }
+  .overlay {  
+    background: -webkit-linear-gradient(315deg, rgba(214,0,47,1) 0%, rgba(214,0,47,1) 10%, rgba(214,0,47,0) 100%);
+    background: -moz-linear-gradient(315deg, rgba(214,0,47,1) 0%, rgba(214,0,47,1) 10%, rgba(214,0,47,0) 100%);
+    background: -o-linear-gradient(315deg, rgba(214,0,47,1) 0%, rgba(214,0,47,1) 10%, rgba(214,0,47,0) 100%);
+    background: linear-gradient(315deg, rgba(214,0,47,1) 0%, rgba(214,0,47,1) 10%, rgba(214,0,47,0) 100%);
 
-  .main {
+    -webkit-transition: all .5s ease-out;  
+    -moz-transition: all .5s ease-out;  
+    -o-transition: all .5s ease-out;  
+    transition: all .5s ease-out;  
+
+
     position: absolute;
     top: 0px;
-    bottom: 0px;
+    bottom: -462px;
     left: 0px;
-    right: 0px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    right: -412px;
     border-radius: 8px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
-  ul li .list_inner:hover .main {
-    transform: scale(1.1);
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background-color: rgba(255,255,255,0.8);
-    opacity: 0;
-    visibility: hidden;
-    border-radius: 8px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
     cursor: pointer;
+  }  
+  ul li .list_inner:hover .overlay{
+    background-position: -412px -462px;
   }
 
-  ul li .list_inner:hover .overlay {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .svg {
+  .cta {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 22px;
     opacity: 0;
     visibility: hidden;
+    top: 40px;
+    right: 0;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
-
-  ul li .list_inner:hover .svg {
+  ul li .list_inner:hover .cta {
     opacity: 1;
     visibility: visible;
+    top: 40px;
+    right: 40px;
   }
 
   .title {
@@ -1498,11 +1490,10 @@ body.dark {
     h3 {
       font-weight: 700;
       font-size: 22px;
-      color: #333333;
-      opacity: 0;
-      visibility: hidden;
+      opacity: 1;
       position: relative;
       top: 10px;
+      margin-bottom: 1rem;
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
       -ms-transition: all 0.3s ease;
@@ -1512,9 +1503,7 @@ body.dark {
 
     span {
       font-size: 16px;
-      color: #555555;
-      opacity: 0;
-      visibility: hidden;
+      opacity: 1;
       position: relative;
       top: 10px;
       -webkit-transition: all 0.3s ease;
@@ -1524,7 +1513,6 @@ body.dark {
       transition: all 0.3s ease;
     }
   }
-
   ul li .list_inner:hover .title {
     h3 {
       opacity: 1;
@@ -1537,127 +1525,6 @@ body.dark {
       visibility: visible;
       top: 0px;
       transition-delay: 0.05s;
-    }
-  }
-
-  .popup_informations {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    z-index: -11;
-    display: none;
-  }
-}
-
-.beny_tm_modalbox_portfolio {
-  overscroll-behavior: none;
-  overflow: hidden;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  height: 100vh;
-  z-index: 15;
-  background-color: rgba(255,255,255, 0.8);
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-
-  &.opened {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .box_inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: calc(100vh - 8rem);
-    width: calc(100vw - 8rem);
-    max-width: 968px;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    z-index: 1;
-    opacity: 0;
-    visibility: hidden;
-    transition-delay: 0.3s;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
-  &.opened .box_inner {
-    opacity: 1;
-    visibility: visible;
-    margin-top: 0px;
-  }
-
-  .close {
-    position: absolute;
-
-    a {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      text-decoration: none;
-      color: #737373;
-      cursor: default;
-    }
-
-    .svg {
-      position: fixed;
-      top: .9rem;
-      right: 1.1rem;
-      z-index: 111;
-      width: 2rem;
-      height: 2rem;
-      cursor: pointer;
-    }
-  }
-
-  .description_wrap {
-    position: relative;
-    width: calc(inherit - 4rem);
-    height: 100%;
-    float: left;
-    padding: 2rem;
-    overflow-y: scroll;
-    overflow-x: hidden;
-
-    .resizable {
-      height: 0;
-      padding-bottom: calc(56.25% - 4rem);
-      width: inherit;
-      max-width: 890px;
-      overflow-x: auto;
-      overflow-y: hidden;
-      position: relative;
-      z-index: 1;
-      resize: horizontal;
-      margin-bottom: 2rem;
-
-      iframe {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-    }
-
-    a {
-      color: #d6002f;
-      &:hover {
-        text-decoration: none;
-      }
     }
   }
 }
@@ -1951,7 +1818,7 @@ body.dark {
 
   /* Remember 4.0+ contrast with background! */
   padding: 1rem 0;
-
+  animation: change-height 5s normal forwards;
   /*these would be service errors like incorrect password */
 }
 
@@ -1962,8 +1829,14 @@ body.dark {
 
   /* Remember 4.0+ contrast with background! */
   padding: 1rem 0;
+  animation: change-height 5s normal forwards;
+}
 
-  /*these would be service errors like incorrect password */
+@keyframes change-height {
+  0%    { max-height: 0; }
+  25%   { max-height: 3.1rem; }
+  75%   { max-height: 3.1rem; }
+  100%  { max-height: 0; }
 }
 
 .contact-form__input-row {
@@ -2318,8 +2191,25 @@ body.dark {
     }
   }
 
-  .beny_tm_services ul li, .beny_tm_portfolio ul li {
+  .beny_tm_services ul li {
     width: 50%;
+  }
+
+  .beny_tm_portfolio {
+    ul {
+      li {
+        width: 50%;
+        padding: 15px;
+      }
+    }
+
+    .overlay {
+      bottom: -494px;
+      right: -440px;
+    }  
+    ul li .list_inner:hover .overlay{
+      background-position: -440px -494px;
+    }
   }
 
   .list_inner {
@@ -2394,12 +2284,19 @@ body.dark {
     }
   }
 
-  .beny_tm_portfolio ul {
-    margin: 0px;
+  .beny_tm_portfolio {
+    ul {
+      li {
+        width: 100%;
+      }
+    }
 
-    li {
-      width: 100%;
-      padding-left: 0px;
+    .overlay {
+      bottom: -578px;
+      right: -516px;
+    }  
+    ul li .list_inner:hover .overlay{
+      background-position: -516px -578px;
     }
   }
 

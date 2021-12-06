@@ -72,7 +72,57 @@ window.onload = event => {
 		'submit',
 		function(e) {
 			e.preventDefault();
-			contact(db);
+			let name = document.getElementById('contact-form__name').value;
+			let email = document.getElementById('contact-form__email').value;
+			let message = document.getElementById('contact-form__message').value;
+			let contact = `${name} <${email}>`;
+			console.log('click');
+			if (!name) return console.log('No Name');
+			if (!email) return console.log('No Email');
+			if (!message) return console.log('No Message');
+			db.collection('mail')
+				.add({
+					from: 'Maverick Manasco',
+					to: email,
+					replyTo: 'maverickcer@gmail.com',
+					bcc: 'maverickcer@gmail.com',
+					template: {
+						name: 'thanks',
+						data: {
+							name: name,
+							email: email,
+							message: message
+						}
+					}
+				})
+				.then(() => {
+					let parent = document.getElementsByClassName('contact-form')[0];
+					let child = document.getElementsByClassName(
+						'contact-form__input-row'
+					)[0];
+					let node =
+						'<div class="contact-form__head-success">Message Sent</div>';
+					parent.insertBefore(node, child);
+					setTimeout(() => {
+						document
+							.getElementsByClassName('contact-form__head-success')[0]
+							.remove();
+					}, 5000);
+				})
+				.catch(e => {
+					let parent = document.getElementsByClassName('contact-form')[0];
+					let child = document.getElementsByClassName(
+						'contact-form__input-row'
+					)[0];
+					let node =
+						'<div class="contact-form__head-error">Error: Try Agian</div>';
+					parent.insertBefore(node, child);
+					setTimeout(() => {
+						document
+							.getElementsByClassName('contact-form__head-error')[0]
+							.remove();
+					}, 5000);
+				});
 			return false;
 		},
 		false
