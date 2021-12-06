@@ -1418,7 +1418,7 @@ body.dark {
           right: 0;
           bottom: 0;
           text-shadow: 2px 2px #000000;
-          h3 {
+          h3, span, .cta {
             color: white;
           }
           a {
@@ -1428,7 +1428,6 @@ body.dark {
             left: 0px;
             right: 0px;
             z-index: 5;
-            color: white;
           }
           img {
             width: 100%;
@@ -1476,6 +1475,7 @@ body.dark {
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    color: white;
   }
   ul li .list_inner:hover .cta {
     opacity: 1;
@@ -1503,6 +1503,7 @@ body.dark {
       -ms-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
+      color: white;
     }
 
     span {
@@ -1515,6 +1516,7 @@ body.dark {
       -ms-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
+      color: white;
     }
   }
   ul li .list_inner:hover .title {
@@ -2002,6 +2004,10 @@ body.dark {
 /*---------------------------------------------------*/
 /*	11) CASE STUDY
 /*---------------------------------------------------*/
+.case-study__spacer {
+  height: 7rem;
+}
+
 .beny_tm_case-study {
   width: 100%;
   min-height: 100vh;
@@ -2059,6 +2065,8 @@ body.dark {
       .case-study__legend {
         display: grid;
         grid-template-columns: auto 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
         li{
           &:nth-of-type(odd){
             font-weight: bold;
@@ -2377,6 +2385,10 @@ body.dark {
       li {
         padding: 0;
         width: 100%;
+        .overlay {
+          bottom: -516px;
+          right: -578px;
+        }  
         .list_inner:hover .overlay{
           background-position: -516px -578px;
         }
