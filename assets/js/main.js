@@ -201,8 +201,10 @@ window.onload = event => {
 							filter__content[ind].classList.remove('active');
 							setTimeout(() => {
 								filter__items[ind].classList.add('active');
-								filter__content[ind].classList.add('active');
-							}, 500);
+								setTimeout(() => {
+									filter__content[ind].classList.add('active');
+								}, 20);
+							}, 250);
 						})(i);
 					}
 				} else {
@@ -210,13 +212,18 @@ window.onload = event => {
 						(ind => {
 							filter__content[ind].classList.remove('active');
 							setTimeout(() => {
-								if (filter__items[ind].classList.contains(target)) {
+								if (
+									filter__items[ind].classList.contains(target) &&
+									!filter__items[ind].classList.contains('active')
+								) {
 									filter__items[ind].classList.add('active');
-									filter__content[ind].classList.add('active');
+									setTimeout(() => {
+										filter__content[ind].classList.add('active');
+									}, 20);
 								} else {
 									filter__items[ind].classList.remove('active');
 								}
-							}, 500);
+							}, 250);
 						})(i);
 					}
 				}

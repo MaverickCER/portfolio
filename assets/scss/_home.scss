@@ -1136,7 +1136,6 @@ body.dark {
 
 .beny_tm_title_holder {
   width: 100%;
-  max-width: 680px;
   height: fit-content;
   clear: both;
   float: left;
@@ -1167,6 +1166,10 @@ body.dark {
     font-weight: 700;
     color: #0f172a;
     margin-bottom: 15px;
+    max-width: 680px;
+  }
+  p {
+    max-width: 680px;
   }
 }
 
@@ -1311,7 +1314,7 @@ body.dark {
 
 .skill_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 4.5vmin;
   color: #737373;
   width: 100%;
@@ -1395,10 +1398,11 @@ body.dark {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: space-between;
+    justify-content: start;
   }
   .portfolio_filter_item {
     width: fit-content;
+    display: flex;
   }
 
   .portfolio_list {
@@ -1416,10 +1420,10 @@ body.dark {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 30px;
     justify-content: space-around;
 
-    li { //filter__data-item
+    li {
       display: none;
       width: calc((100% - 60px)/3);
       &.active {
@@ -2206,8 +2210,6 @@ body.dark {
   }
 
   .beny_tm_title_holder {
-    max-width: 550px;
-
     span {
       margin-bottom: 2px;
     }
@@ -2215,6 +2217,9 @@ body.dark {
     h3 {
       font-size: 50px;
       margin-bottom: 10px;
+    }
+    p {
+      max-width: 550px;
     }
   }
   
@@ -2404,6 +2409,9 @@ body.dark {
       width: 100%;
       padding-left: 0px;
     }
+  }
+  .skill_grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .beny_tm_portfolio {
