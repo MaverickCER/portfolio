@@ -200,11 +200,15 @@ window.onload = event => {
 						(ind => {
 							filter__content[ind].classList.remove('active');
 							setTimeout(() => {
-								filter__items[ind].classList.add('active');
-								setTimeout(() => {
-									filter__content[ind].classList.add('active');
-								}, 20);
+								if (!filter__items[ind].classList.contains('active')) {
+									filter__items[ind].classList.add('active');
+								}
 							}, 250);
+							setTimeout(() => {
+								if (!filter__content[ind].classList.contains('active')) {
+									filter__content[ind].classList.add('active');
+								}
+							}, 270);
 						})(i);
 					}
 				} else {
@@ -212,18 +216,23 @@ window.onload = event => {
 						(ind => {
 							filter__content[ind].classList.remove('active');
 							setTimeout(() => {
-								if (
-									filter__items[ind].classList.contains(target) &&
-									!filter__items[ind].classList.contains('active')
-								) {
-									filter__items[ind].classList.add('active');
-									setTimeout(() => {
-										filter__content[ind].classList.add('active');
-									}, 20);
+								if (filter__items[ind].classList.contains(target)) {
+									if (!filter__items[ind].classList.contains('active')) {
+										filter__items[ind].classList.add('active');
+									}
 								} else {
-									filter__items[ind].classList.remove('active');
+									if (filter__items[ind].classList.contains('active')) {
+										filter__items[ind].classList.remove('active');
+									}
 								}
 							}, 250);
+							setTimeout(() => {
+								if (filter__items[ind].classList.contains(target)) {
+									if (!filter__content[ind].classList.contains('active')) {
+										filter__content[ind].classList.add('active');
+									}
+								}
+							}, 20);
 						})(i);
 					}
 				}
