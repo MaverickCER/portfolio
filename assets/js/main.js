@@ -172,7 +172,7 @@ window.onload = event => {
 					.classList.add('current');
 			} else {
 				document
-					.querySelector('.anchor_nav a[href*=' + sectionId + ']')
+					.querySelctor('.anchor_nav a[href*=' + sectionId + ']')
 					.classList.remove('current');
 			}
 		});
@@ -203,12 +203,12 @@ window.onload = event => {
 								if (!filter__items[ind].classList.contains('active')) {
 									filter__items[ind].classList.add('active');
 								}
-							}, 250);
+							}, 480);
 							setTimeout(() => {
 								if (!filter__content[ind].classList.contains('active')) {
 									filter__content[ind].classList.add('active');
 								}
-							}, 270);
+							}, 500);
 						})(i);
 					}
 				} else {
@@ -225,14 +225,14 @@ window.onload = event => {
 										filter__items[ind].classList.remove('active');
 									}
 								}
-							}, 250);
+							}, 480);
 							setTimeout(() => {
 								if (filter__items[ind].classList.contains(target)) {
 									if (!filter__content[ind].classList.contains('active')) {
 										filter__content[ind].classList.add('active');
 									}
 								}
-							}, 20);
+							}, 500);
 						})(i);
 					}
 				}
