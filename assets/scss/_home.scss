@@ -1388,13 +1388,17 @@ body.dark {
   .portfolio_filter_list {
     margin: 0;
     padding: 0;
+    padding-top: 60px;
     width: 100%;
     max-width: 800px;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 30px;
     justify-content: space-between;
+  }
+  .portfolio_filter_item {
+    width: fit-content;
   }
 
   .portfolio_list {
@@ -1417,7 +1421,7 @@ body.dark {
 
     li { //filter__data-item
       display: none;
-      width: calc((100% - 4rem)/3);
+      width: calc((100% - 60px)/3);
       &.active {
         display: flex;
       }
@@ -1461,10 +1465,10 @@ body.dark {
   }
 
   .overlay {  
-    background: -webkit-linear-gradient(315deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.8) 30%, rgba(0,0,0,.1) 100%);
-    background: -moz-linear-gradient(315deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.8) 30%, rgba(0,0,0,.1) 100%);
-    background: -o-linear-gradient(315deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.8) 30%, rgba(0,0,0,.1) 100%);
-    background: linear-gradient(315deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.8) 30%, rgba(0,0,0,.1) 100%);
+    background: -webkit-linear-gradient(315deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 5%, rgba(0,0,0,0.6) 15%, rgba(0,0,0,0.2) 100%);
+    background: -moz-linear-gradient(315deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 5%, rgba(0,0,0,0.6) 15%, rgba(0,0,0,0.2) 100%);
+    background: -o-linear-gradient(315deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 5%, rgba(0,0,0,0.6) 15%, rgba(0,0,0,0.2) 100%);
+    background: linear-gradient(315deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 5%, rgba(0,0,0,0.6) 15%, rgba(0,0,0,0.2) 100%);
 
     -webkit-transition: all .5s ease-out;  
     -moz-transition: all .5s ease-out;  
