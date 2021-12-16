@@ -1136,7 +1136,6 @@ body.dark {
 
 .beny_tm_title_holder {
   width: 100%;
-  max-width: 680px;
   height: fit-content;
   clear: both;
   float: left;
@@ -1167,6 +1166,10 @@ body.dark {
     font-weight: 700;
     color: #0f172a;
     margin-bottom: 15px;
+    max-width: 680px;
+  }
+  p {
+    max-width: 680px;
   }
 }
 
@@ -1311,7 +1314,7 @@ body.dark {
 
 .skill_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 4.5vmin;
   color: #737373;
   width: 100%;
@@ -1385,6 +1388,22 @@ body.dark {
   clear: both;
   float: left;
   padding: 120px 0px 70px 0px;
+  .portfolio_filter_list {
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    width: 100%;
+    max-width: 800px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: start;
+  }
+  .portfolio_filter_item {
+    width: fit-content;
+    display: flex;
+  }
 
   .portfolio_list {
     width: 100%;
@@ -1396,14 +1415,20 @@ body.dark {
 
   ul {
     margin: 0;
+    padding: 0;
     width: 100%;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: space-around;
 
     li {
+      display: none;
       width: calc((100% - 60px)/3);
+      &.active {
+        display: flex;
+      }
       .list_outer {
         position: relative;
         width: 100%;
@@ -1411,15 +1436,21 @@ body.dark {
         padding-bottom: 112%;
         overflow: hidden;
         border-radius: 8px;
+        opacity: 0;
+        transition: all .24s linear;
+        &.active {
+          opacity: 1;
+        }
         .list_inner {
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
-          text-shadow: 2px 2px #000000;
+
           h3, span, .cta {
             color: white;
+            text-shadow: 2px 2px #000000;
           }
           a {
             position: absolute;
@@ -1428,6 +1459,7 @@ body.dark {
             left: 0px;
             right: 0px;
             z-index: 5;
+            text-shadow: 2px 2px #000000;
           }
           img {
             width: 100%;
@@ -1438,10 +1470,10 @@ body.dark {
   }
 
   .overlay {  
-    background: -webkit-linear-gradient(315deg, rgba(214,0,47,1) 0%, rgba(214,0,47,1) 10%, rgba(214,0,47,0) 100%);
-    background: -moz-linear-gradient(315deg, rgba(214,0,47,1) 0%, rgba(214,0,47,1) 10%, rgba(214,0,47,0) 100%);
-    background: -o-linear-gradient(315deg, rgba(214,0,47,1) 0%, rgba(214,0,47,1) 10%, rgba(214,0,47,0) 100%);
-    background: linear-gradient(315deg, rgba(214,0,47,1) 0%, rgba(214,0,47,1) 10%, rgba(214,0,47,0) 100%);
+    background: -webkit-linear-gradient(315deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 5%, rgba(0,0,0,0.6) 15%, rgba(0,0,0,0.2) 100%);
+    background: -moz-linear-gradient(315deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 5%, rgba(0,0,0,0.6) 15%, rgba(0,0,0,0.2) 100%);
+    background: -o-linear-gradient(315deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 5%, rgba(0,0,0,0.6) 15%, rgba(0,0,0,0.2) 100%);
+    background: linear-gradient(315deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 5%, rgba(0,0,0,0.6) 15%, rgba(0,0,0,0.2) 100%);
 
     -webkit-transition: all .5s ease-out;  
     -moz-transition: all .5s ease-out;  
@@ -2179,8 +2211,6 @@ body.dark {
   }
 
   .beny_tm_title_holder {
-    max-width: 550px;
-
     span {
       margin-bottom: 2px;
     }
@@ -2188,6 +2218,9 @@ body.dark {
     h3 {
       font-size: 50px;
       margin-bottom: 10px;
+    }
+    p {
+      max-width: 550px;
     }
   }
   
@@ -2377,6 +2410,9 @@ body.dark {
       width: 100%;
       padding-left: 0px;
     }
+  }
+  .skill_grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .beny_tm_portfolio {
