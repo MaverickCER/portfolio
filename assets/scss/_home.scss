@@ -1385,6 +1385,17 @@ body.dark {
   clear: both;
   float: left;
   padding: 120px 0px 70px 0px;
+  .portfolio_filter_list {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 800px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
 
   .portfolio_list {
     width: 100%;
@@ -1396,14 +1407,20 @@ body.dark {
 
   ul {
     margin: 0;
+    padding: 0;
     width: 100%;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 2rem;
+    justify-content: space-around;
 
-    li {
-      width: calc((100% - 60px)/3);
+    li { //filter__data-item
+      display: none;
+      width: calc((100% - 4rem)/3);
+      &.active {
+        display: flex;
+      }
       .list_outer {
         position: relative;
         width: 100%;
@@ -1411,15 +1428,20 @@ body.dark {
         padding-bottom: 112%;
         overflow: hidden;
         border-radius: 8px;
+        opacity: 0;
+        &.active {
+          opacity: 1;
+        }
         .list_inner {
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
-          text-shadow: 2px 2px #000000;
+
           h3, span, .cta {
             color: white;
+            text-shadow: 2px 2px #000000;
           }
           a {
             position: absolute;
@@ -1428,6 +1450,7 @@ body.dark {
             left: 0px;
             right: 0px;
             z-index: 5;
+            text-shadow: 2px 2px #000000;
           }
           img {
             width: 100%;
@@ -1438,10 +1461,10 @@ body.dark {
   }
 
   .overlay {  
-    background: -webkit-linear-gradient(315deg, rgba(214,0,47,1) 0%, rgba(214,0,47,1) 10%, rgba(214,0,47,0) 100%);
-    background: -moz-linear-gradient(315deg, rgba(214,0,47,1) 0%, rgba(214,0,47,1) 10%, rgba(214,0,47,0) 100%);
-    background: -o-linear-gradient(315deg, rgba(214,0,47,1) 0%, rgba(214,0,47,1) 10%, rgba(214,0,47,0) 100%);
-    background: linear-gradient(315deg, rgba(214,0,47,1) 0%, rgba(214,0,47,1) 10%, rgba(214,0,47,0) 100%);
+    background: -webkit-linear-gradient(315deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.8) 30%, rgba(0,0,0,.1) 100%);
+    background: -moz-linear-gradient(315deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.8) 30%, rgba(0,0,0,.1) 100%);
+    background: -o-linear-gradient(315deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.8) 30%, rgba(0,0,0,.1) 100%);
+    background: linear-gradient(315deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.8) 30%, rgba(0,0,0,.1) 100%);
 
     -webkit-transition: all .5s ease-out;  
     -moz-transition: all .5s ease-out;  

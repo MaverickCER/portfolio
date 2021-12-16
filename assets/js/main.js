@@ -178,6 +178,52 @@ window.onload = event => {
 		});
 	}
 	window.addEventListener('scroll', scrollActive);
+
+	// -------------------------------------------------
+	// -------------  Portfolio Filter -----------------
+	// -------------------------------------------------
+	let filter__buttons = document.getElementsByClassName('portfolio_filter_btn');
+	let filter__items = document.getElementsByClassName('portfolio_list_item');
+	let filter__content = document.getElementsByClassName('list_outer');
+	for (var i = 0; i < filter__buttons.length; i++) {
+		(index => {
+			filter__buttons[index].addEventListener('click', () => {
+				for (var i = 0; i < filter__buttons.length; i++) {
+					(ind => {
+						filter__buttons[ind].classList.remove('selected');
+					})(i);
+				}
+				filter__buttons[index].classList.add('selected');
+				let target = filter__buttons[index].getAttribute('data-role');
+				if (target == 'filter_none') {
+					for (var i = 0; i < filter__items.length; i++) {
+						(ind => {
+							filter__content[ind].classList.remove('active');
+							setTimeout(() => {
+								filter__items[ind].classList.add('active');
+								filter__content[ind].classList.add('active');
+							}, 500);
+						})(i);
+					}
+				} else {
+					for (var i = 0; i < filter__items.length; i++) {
+						(ind => {
+							filter__content[ind].classList.remove('active');
+							setTimeout(() => {
+								if (filter__items[ind].classList.contains(target)) {
+									filter__items[ind].classList.add('active');
+									filter__content[ind].classList.add('active');
+								} else {
+									filter__items[ind].classList.remove('active');
+								}
+							}, 500);
+						})(i);
+					}
+				}
+			});
+		})(i);
+	}
+
 	// -------------------------------------------------
 	// -------------  MODALBOX SERVICE -----------------
 	// -------------------------------------------------
