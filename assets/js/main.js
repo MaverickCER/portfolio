@@ -58,15 +58,16 @@ window.onload = event => {
 	// -----------------   Contact    ----------------------
 	// -----------------------------------------------------
 	const firebaseConfig = {
-		apiKey: 'AIzaSyC8C5_WNvOWNs46wcVJiBwPLbcewJOGNfU',
-		authDomain: 'callouts-evolved.firebaseapp.com',
-		projectId: 'callouts-evolved',
-		storageBucket: 'callouts-evolved.appspot.com',
-		messagingSenderId: '682142902161',
-		appId: '1:682142902161:web:bdb6868dbb2a4b53769c30',
-		measurementId: 'G-PBF9ZRCMEX'
+		apiKey: 'AIzaSyCdWx6jh_xbsygBL1_UlJXeYtyVURTwJwA',
+		authDomain: 'portfoliocer.firebaseapp.com',
+		projectId: 'portfoliocer',
+		storageBucket: 'portfoliocer.appspot.com',
+		messagingSenderId: '291675258755',
+		appId: '1:291675258755:web:d2ec718e032f44ef8d80b6',
+		measurementId: 'G-31G5XN8PB7'
 	};
 	const app = firebase.initializeApp(firebaseConfig);
+	const analytics = getAnalytics(app);
 	const db = firebase.firestore();
 	document.getElementById('contact-form').addEventListener(
 		'submit',

@@ -2041,7 +2041,7 @@ body.dark {
 
 .beny_tm_case-study {
   width: 100%;
-  min-height: 100vh;
+  min-height: fit-content;
   float: left;
   position: relative;
   scroll-behavior: smooth;
@@ -2049,13 +2049,13 @@ body.dark {
     border-radius: 6px;
   }
   .container {
-    min-height: 100vh;
+    min-height: fit-content;
     z-index: 2;
     padding-bottom: 2rem;
     position: relative;
     .case-study__grid {
       display: grid;
-      grid-template-columns: 8fr 4fr;
+      grid-template-columns: 1fr;
       grid-gap: 1rem;
       a {
         color: #d6002f;
@@ -2383,7 +2383,7 @@ body.dark {
   .beny_tm_case-study {
     .container {
       .case-study__grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
       }
     }
   }
@@ -2425,8 +2425,14 @@ body.dark {
           bottom: -578px;
           right: -516px;
         }  
-        ul li .list_inner:hover .overlay{
+        ul li .list_inner .overlay{
           background-position: -516px -578px;
+        }
+        ul li .list_inner .cta {
+          opacity: 1;
+          visibility: visible;
+          top: 40px;
+          right: 40px;
         }
       }
     }
