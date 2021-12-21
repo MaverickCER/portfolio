@@ -67,7 +67,6 @@ window.onload = event => {
 		measurementId: 'G-PBF9ZRCMEX'
 	};
 	const app = firebase.initializeApp(firebaseConfig);
-	const analytics = getAnalytics(app);
 	const db = firebase.firestore();
 	document.getElementById('contact-form').addEventListener(
 		'submit',
