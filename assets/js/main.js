@@ -41,18 +41,18 @@ setTimeout(function() {
 		}, 1500);
 	}
 }, 500);
-window.onload = (event) => {
-  // -----------------------------------------------------
-  // -----------------   Carousel    ---------------------
-  // -----------------------------------------------------
-  var glide = new Glide('.glide', {
-    type: 'carousel',
-    animationDuration: 500,
-    autoplay: false,
-    focusAt: '2',
-    startAt: 2,
-    perView: 1
-  });
+window.onload = event => {
+	// -----------------------------------------------------
+	// -----------------   Carousel    ---------------------
+	// -----------------------------------------------------
+	var glide = new Glide('.glide', {
+		type: 'carousel',
+		animationDuration: 500,
+		autoplay: false,
+		focusAt: '2',
+		startAt: 2,
+		perView: 1
+	});
 	glide.mount();
 	// -----------------------------------------------------
 	// -----------------   Contact    ----------------------
