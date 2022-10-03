@@ -76,19 +76,19 @@ const Header = ({ isDark }) => {
           currentClassName={isDark ? '' : 'current'}
           offset={-100}>
           <li>
-            <a href="#home">
+            <a href="/#home">
               <Home />
               <span>Home</span>
             </a>
           </li>
           <li>
-            <a href="#portfolio">
+            <a href="/#portfolio">
               <Portfolio />
               <span>Portfolio</span>
             </a>
           </li>
           <li>
-            <a href="#about">
+            <a href="/#about">
               <About />
               <span>About</span>
             </a>
