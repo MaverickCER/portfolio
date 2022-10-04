@@ -1,8 +1,10 @@
-import Contact from "../components/Contact";
-import Error from "../components/Error";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Contact from '../components/Contact';
+import Error from '../components/Error';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 import ReactGA from 'react-ga';
+import { useEffect } from 'react';
+import useHotjar from 'react-use-hotjar';
 
 const NotFound = () => {
   const { stateChange } = useHotjar();
