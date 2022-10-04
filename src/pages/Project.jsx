@@ -289,8 +289,8 @@ const Project = ({ id }) => {
     return () => {
       clearInterval(addTimer);
       clearInterval(removeTimer);
-    }
-  }, [id]);
+    };
+  }, [id, stateChange]);
 
   return (
     <>
