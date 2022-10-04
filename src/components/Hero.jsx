@@ -1,6 +1,6 @@
 import { ReactComponent as Decore } from '../assets/icons/decore.svg';
 import Social from "./Social";
-import Three from '../assets/images/3.jpg';
+import Three from '../assets/images/3.webp';
 
 const Hero = () => {
   return (
