@@ -19,7 +19,7 @@
     <a href="https://github.com/MaverickCER/portfolio/img/websitethumb.png"><strong>Explore the development code »</strong></a>
     <br />
     <br />
-    <a href="https://www.maverickcer.dev">View Live Portfolio</a>
+    <a href="https://www.maverickmanasco.com">View Live Portfolio</a>
     ·
     <a href="https://github.com/MaverickCER/portfolio/issues">Report Bug</a>
     ·
@@ -52,11 +52,13 @@
 
 This is my personal portfolio built with the goal of obtaining a full time position.
 The development code can be found at [https://github.com/MaverickCER/portfolio](https://github.com/MaverickCER/portfolio)<br/>
-The live site is available at [https://www.maverickcer.dev](https://www.maverickcer.dev)
+The live site is available at [https://www.maverickmanasco.com](https://www.maverickmanasco.com)
 
 ### Built With
 
-* [HTML5](https://reactjs.org/)
+* [AOS](https://michalsnik.github.io/aos/)
+* [React](https://reactjs.org/)
+* [hotjar](https://www.hotjar.com/)
 * [EmailJS](https://www.emailjs.com/)
 * [CodeSandbox](https://www.codesandbox.io/)
 
@@ -67,7 +69,7 @@ The live site is available at [https://www.maverickcer.dev](https://www.maverick
 Install [nodejs](https://nodejs.org/)<br/>
 Clone the react [repo](https://github.com/MaverickCER/portfolio)<br/>
 In your console, navigate to the repo folder and run `npm i`<br/>
-I utilize firebase, trigger email, and mailgun to set up free email confirmations.
+I utilized emailjs, and mailgun to set up free email confirmations.
 
 
 <!-- ROADMAP -->
@@ -88,7 +90,7 @@ If you have suggestions, they can be added to [Issues](https://github.com/Maveri
 ## Contact
 
 Maverick Manasco - @MaverickCER<br/>
-[<img src="https://i.imgur.com/ug3iVUk.png" alt="https://www.maverickcer.dev" width="auto" height="24px">](https://www.maverickcer.dev) 
+[<img src="https://i.imgur.com/ug3iVUk.png" alt="https://www.maverickmanasco.com" width="auto" height="24px">](https://www.maverickmanasco.com) 
 [![maverickcer@gmail.com](https://cdn3.iconfinder.com/data/icons/social-rounded-2/72/Email-24.png)](mailto:maverickcer@gmail.com) 
 [![CodePen](https://cdn3.iconfinder.com/data/icons/social-rounded-2/72/Codepen-24.png)](https://codepen.io/maverickcer) 
 [<img src="https://i.imgur.com/QAFF9m4.png" alt="CodeSandbox" width="auto" height="24px">](https://codesandbox.io/u/MaverickCER) 
@@ -103,4 +105,4 @@ Project Link: [https://github.com/MaverickCER/portfolio](https://github.com/Mave
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [GitHub Pages](https://pages.github.com)
+* [Netlify](https://www.netlify.com/)
