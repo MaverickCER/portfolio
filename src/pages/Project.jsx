@@ -8,7 +8,9 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
 import LinkedInVideo from '../assets/videos/linkedinvideo.mp4';
+import ReactGA from 'react-ga';
 import TransAmericaVideo from '../assets/videos/transamericavideo.mp4';
+import useHotjar from 'react-use-hotjar';
 
 const projectContent = {
   calloutsevolved: {
@@ -272,11 +274,14 @@ const projectList = [
 ];
 
 const Project = ({ id }) => {
+  const { stateChange } = useHotjar();
   const [project, setProject] = useState(undefined);
   const [preload, setPreload] = useState(true);
   const [preloaded, setPreloaded] = useState(false);
 
   useEffect(() => {
+    ReactGA.event({ action: 'navigation', category: 'project', label: id });
+    stateChange(`/project/${id}`, console.info);
     if (projectList.includes(id)) {
       setProject(projectContent[id]);
     }

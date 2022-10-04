@@ -4,7 +4,9 @@ import LunulaLyra from '../assets/images/lunulalyra.webp';
 import Mark from '../assets/images/mark.webp';
 import Paige from '../assets/images/paige.webp';
 import { ReactComponent as Quote } from '../assets/icons/quote.svg';
+import ReactGA from 'react-ga';
 import Stacy from '../assets/images/stacy.webp';
+import useHotjar from 'react-use-hotjar';
 
 const testimonialsContent = [
   {
@@ -34,6 +36,8 @@ const testimonialsContent = [
 ];
 
 const Testimonials = () => {
+  const { tagRecording } = useHotjar();
+
   return (
     <div className="testimonials">
       <div className="container">
@@ -45,12 +49,30 @@ const Testimonials = () => {
           <Carousel
             wrapAround={true}
             renderCenterLeftControls={({ previousSlide }) => (
-              <button onClick={previousSlide}>
+              <button
+                onClick={() => {
+                  previousSlide();
+                  ReactGA.event({
+                    action: 'previous',
+                    category: 'testimonial',
+                    label: 'interaction',
+                  });
+                  tagRecording(['previous testimonial'], console.info);
+                }}>
                 <Arrow />
               </button>
             )}
             renderCenterRightControls={({ nextSlide }) => (
-              <button onClick={nextSlide}>
+              <button
+                onClick={() => {
+                  nextSlide();
+                  ReactGA.event({
+                    action: 'next',
+                    category: 'testimonial',
+                    label: 'interaction',
+                  });
+                  tagRecording(['next testimonial'], console.info);
+                }}>
                 <Arrow />
               </button>
             )}>
@@ -78,6 +100,6 @@ const Testimonials = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Testimonials;

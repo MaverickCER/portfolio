@@ -1,10 +1,12 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from 'react';
 
 import { ReactComponent as Fiverr } from '../assets/icons/fiverr.svg';
 import { ReactComponent as LinkedIn } from '../assets/icons/linkedin.svg';
+import ReactGA from 'react-ga';
 import { ReactComponent as Twitter } from '../assets/icons/twitter.svg';
 import emailjs from '@emailjs/browser';
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
+import useHotjar from 'react-use-hotjar';
 
 const contactList = [
   {
@@ -26,6 +28,10 @@ const contactList = [
 
 const Contact = () => {
   const formRef = useRef(null);
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const messageRef = useRef(null);
+  const { tagRecording } = useHotjar();
   const [isLoading, setIsLoading] = useState(true);
   const [showSubmit, setShowSubmit] = useState(true);
   const {
@@ -38,7 +44,13 @@ const Contact = () => {
   const onSubmit = (data, e) => {
     e.preventDefault();
     setShowSubmit(false);
-    console.log('Message submited: ', data);
+    let string = `{"name":"${nameRef.current.value}","email":"${emailRef.current.value}","message":"${messageRef.current.value}"},`;
+    ReactGA.event({
+      action: 'form',
+      category: 'submitted',
+      label: string,
+    });
+    tagRecording([string], console.info);
     emailjs
       .sendForm(
         'service_hunc5i5',
@@ -50,8 +62,7 @@ const Contact = () => {
         reset();
         localStorage.setItem('emailsent', 'true');
         setIsLoading(false);
-      }
-      );
+      });
   };
 
   useEffect(() => {
@@ -60,7 +71,8 @@ const Contact = () => {
       setIsLoading(false);
       setShowSubmit(false);
     }
-  }, [])
+    ReactGA.event({ action: 'form', category: 'loaded', label: emailSent });
+  }, []);
 
   return (
     <div className="container">
@@ -96,6 +108,7 @@ const Contact = () => {
                     {...register('name', { required: true })}
                     type="text"
                     placeholder="Name *"
+                    ref={nameRef}
                   />
                   {errors.name && errors.name.type === 'required' && (
                     <span className="invalid-feedback">Name is required</span>
@@ -116,6 +129,7 @@ const Contact = () => {
                     )}
                     type="email"
                     placeholder="Email *"
+                    ref={emailRef}
                   />
                   {errors.email && <span className="invalid-feedback">{errors.email.message}</span>}
                 </div>
@@ -124,15 +138,20 @@ const Contact = () => {
               <div className="message">
                 <textarea
                   {...register('message', { required: true })}
-                  placeholder="Message *"></textarea>
+                  placeholder="Message *"
+                  ref={messageRef}></textarea>
                 {errors.message && <span className="invalid-feedback">Message is required.</span>}
               </div>
 
               <div className="button">
                 <button type={showSubmit ? 'submit' : 'button'} className="color">
                   <span className="wrapper">
-                    <span className="first">{showSubmit ? 'Submit' : isLoading ? 'Sending...' : 'Thank you!'}</span>
-                    <span className="second">{showSubmit ? 'Submit' : isLoading ? 'Sending...' : 'Thank you!'}</span>
+                    <span className="first">
+                      {showSubmit ? 'Submit' : isLoading ? 'Sending...' : 'Thank you!'}
+                    </span>
+                    <span className="second">
+                      {showSubmit ? 'Submit' : isLoading ? 'Sending...' : 'Thank you!'}
+                    </span>
                   </span>
                 </button>
               </div>
