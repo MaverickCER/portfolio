@@ -3,7 +3,6 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 import Project from "../pages/Project";
-import React from "react";
 import ScrollTopBehaviour from "../components/ScrollTopBehaviour";
 
 const Routes = () => {
