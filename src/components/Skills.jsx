@@ -183,7 +183,7 @@ const Skills = () => {
       <div className="container resume_inner">
         <div className="row">
           {/* Employment */}
-          <div className="col-4" data-aos="fade-right" data-aos-duration="1200">
+          <div className="col-3" data-aos="fade-right" data-aos-duration="1200">
             <div className="education">
               <div className="edu_list">
                 <div className="title_holder">
@@ -209,7 +209,7 @@ const Skills = () => {
           {/* /Employment */}
 
           {/* Education */}
-          <div className="col-4" data-aos="fade-right" data-aos-duration="1200">
+          <div className="col-3" data-aos="fade-right" data-aos-duration="1200">
             <div className="education">
               <div className="edu_list">
                 <div className="title_holder">
@@ -236,7 +236,7 @@ const Skills = () => {
 
           {/* Skills */}
           <div
-            className="col-4"
+            className="col-3"
             data-aos="fade-right"
             data-aos-duration="1200"
             data-aos-delay="200">
