@@ -1,6 +1,6 @@
+import Background from '../assets/images/background.webp';
 import { ReactComponent as Decore } from '../assets/icons/decore.svg';
 import Social from "./Social";
-import Three from '../assets/images/3.webp';
 
 const Hero = () => {
   return (
@@ -9,7 +9,7 @@ const Hero = () => {
         <div
           className="image"
           style={{
-            backgroundImage: `url(${Three})`,
+            backgroundImage: `url(${Background})`,
           }}></div>
         <div className="overlay"></div>
       </div>
