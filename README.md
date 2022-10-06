@@ -48,7 +48,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Screenshot](https://github.com/MaverickCER/portfolio/img/websitethumb.png "Portfolio")
+![Screenshot](https://github.com/MaverickCER/portfolio/src/assets/images/thumnail.png "Portfolio")
 
 This is my personal portfolio built with the goal of obtaining a full time position.
 The development code can be found at [https://github.com/MaverickCER/portfolio](https://github.com/MaverickCER/portfolio)<br/>
