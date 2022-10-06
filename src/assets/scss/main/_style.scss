@@ -430,6 +430,9 @@ h6 {
   top: 100%;
   transition: all 0.3s ease;
 }
+.social ul li .second {
+  left: -8px;
+}
 .topbar ul li a:hover .first,
 .social ul li a:hover .first {
   transform: translateY(-150%);
@@ -720,6 +723,7 @@ h6 {
   max-width: fit-content;
   padding: 0 8px;
   border-radius: 8px;
+  min-width: max-content;
 }
 .hero .social ul li a:hover {
   color: #ed0b0f;
