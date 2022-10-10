@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import CelligenceVideo from '../assets/videos/celligencevideo.mp4';
 import Contact from '../components/Contact';
 import DisplateVideo from '../assets/videos/displatevideo.mp4';
 import Error from '../components/Error';
@@ -9,6 +10,7 @@ import Header from '../components/Header';
 import { Link } from 'react-router-dom';
 import LinkedInVideo from '../assets/videos/linkedinvideo.mp4';
 import ReactGA from 'react-ga';
+import SWMCVideo from '../assets/videos/swmcvideo.mp4';
 import TransAmericaVideo from '../assets/videos/transamericavideo.mp4';
 import useHotjar from 'react-use-hotjar';
 
@@ -48,7 +50,7 @@ const projectContent = {
     technologies: 'React, Intersection Observer, ',
     timeframe: '1 Week',
     title: 'Celligence Empathic Technology',
-    video: '',
+    video: CelligenceVideo,
     next: {
       name: 'Language Learning',
       link: 'morerise',
@@ -204,7 +206,7 @@ const projectContent = {
       'React, Java Server Pages, PHP, Laravel, AWS Lambda, AWS S3, AWS EC2, and Apache hosting',
     timeframe: '6 Months',
     title: 'SWMC Lead Generation',
-    video: '',
+    video: SWMCVideo,
     next: {
       name: 'AAC for Gamers',
       link: 'calloutsevolved',
