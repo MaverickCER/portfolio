@@ -19,7 +19,7 @@ const projectContent = {
     client: 'Deaf Destiny Network',
     code: 'https://github.com/MaverickCER/CalloutsEvolved',
     description: 'Augmentative and Alternative Communication Application for Gamers',
-    link: 'https://www.calloutsevolved.com/',
+    link: 'https://testingcallouts2.web.app/',
     name: 'Callouts Evolved',
     role: 'Project Manager, Designer, Software Developer',
     sector: 'Video Games, Accessibility',
