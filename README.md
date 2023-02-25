@@ -19,7 +19,7 @@
     <a href="https://github.com/MaverickCER/portfolio/img/websitethumb.png"><strong>Explore the development code »</strong></a>
     <br />
     <br />
-    <a href="https://www.maverickmanasco.com">View Live Portfolio</a>
+    <a href="https://www.maverickmanasco.dev">View Live Portfolio</a>
     ·
     <a href="https://github.com/MaverickCER/portfolio/issues">Report Bug</a>
     ·
@@ -52,7 +52,7 @@
 
 This is my personal portfolio built with the goal of obtaining a full time position.
 The development code can be found at [https://github.com/MaverickCER/portfolio](https://github.com/MaverickCER/portfolio)<br/>
-The live site is available at [https://www.maverickmanasco.com](https://www.maverickmanasco.com)
+The live site is available at [https://www.maverickmanasco.dev](https://www.maverickmanasco.dev)
 
 ### Built With
 
@@ -90,7 +90,7 @@ If you have suggestions, they can be added to [Issues](https://github.com/Maveri
 ## Contact
 
 Maverick Manasco - @MaverickCER<br/>
-[<img src="https://i.imgur.com/ug3iVUk.png" alt="https://www.maverickmanasco.com" width="auto" height="24px">](https://www.maverickmanasco.com) 
+[<img src="https://i.imgur.com/ug3iVUk.png" alt="https://www.maverickmanasco.dev" width="auto" height="24px">](https://www.maverickmanasco.dev) 
 [![maverickcer@gmail.com](https://cdn3.iconfinder.com/data/icons/social-rounded-2/72/Email-24.png)](mailto:maverickcer@gmail.com) 
 [![CodePen](https://cdn3.iconfinder.com/data/icons/social-rounded-2/72/Codepen-24.png)](https://codepen.io/maverickcer) 
 [<img src="https://i.imgur.com/QAFF9m4.png" alt="CodeSandbox" width="auto" height="24px">](https://codesandbox.io/u/MaverickCER) 
