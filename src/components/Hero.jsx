@@ -28,7 +28,7 @@ const Hero = () => {
             </h3>
             <h1 className="job" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="50">
               <p className="loop-text lead">Web Developer</p>
-              <span>Based In Florida</span>
+              <span>Based In Alaska</span>
             </h1>
             <p className="text" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100">
               I remotely design, build, and publish responsive web interactions that help people
